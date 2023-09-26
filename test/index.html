@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1 id="out" style="max-width: 100%; word-break: break-all;"></h1>
     <button id="test">click on me</button>
     <script>
         document.getElementById('test').addEventListener('click', function(){
@@ -15,7 +16,7 @@
                     numbers.push(i);
                 }
             }
-            alert(numbers);
+            document.getElementById('out').innerHTML = numbers.join(", ");
         });
     </script>
 </body>

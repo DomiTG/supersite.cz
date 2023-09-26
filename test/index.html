@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="test">click on me</button>
+    <script>
+        document.getElementById('test').addEventListener('click', function(){
+            const numbers = [];
+            for(let i = 0; i < 1000; i++){
+                if(i % 2 === 1){
+                    numbers.push(i);
+                }
+            }
+            alert(numbers);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <script src="https://kit.fontawesome.com/b70c840f5f.js" crossorigin="anonymous"></script>
+      <title>
+         SUPERSITE
+      </title>
+      <!-- Meta Pixel Code -->
+      <!-- End Meta Pixel Code -->
+      <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+      <style>
+         @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+         * {
+         font-family: "Montserrat", sans-serif;
+         }
+         html {
+         scroll-behavior: smooth;
+         }
+         body {
+         overflow-x: hidden;
+         }
+         .pink-border-nav {
+         border-bottom: 2px solid transparent;
+         transition: border-bottom 0.3s ease;
+         }
+         .pink-border-nav:hover {
+         border-bottom: 2px solid lightblue;
+         }
+         .bottom-strip {
+         height: 30px;
+         width: calc(100% + 2rem);
+         margin-left: -1rem;
+         transition: box-shadow 0.3s ease-in-out;
+         transform: rotate(2deg);
+         }
+         .big-rotate {
+         width: 100%;
+         height: 30px;
+         width: calc(100% + 2rem);
+         margin-left: -1rem;
+         transition: box-shadow 0.3s ease-in-out;
+         transform: rotate(1deg);
+         }
+         .bg-molik {
+         background: #f8049a;
+         }
+         .hero-shadow {
+         box-shadow: 0 25px 50px -12px rgba(0, 100, 100, 1);
+         }
+         .strip {
+         transform: rotate(15deg);
+         }
+         @media (max-width: 768px) {
+         #navLinks {
+         display: none;
+         flex-direction: column;
+         position: absolute;
+         top: 7vh;
+         left: 0;
+         width: 100%;
+         background-color: #fff;
+         border-top: 1px solid rgba(0, 0, 0, 0.1);
+         }
+         .button {
+         width: 100%;
+         text-align: left;
+         padding: 0.5rem 1rem;
+         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+         color: #000;
+         }
+         #navLinks.active {
+         display: flex;
+         }
+         md:flex {
+         flex-direction: column-reverse;
+         }
+         .image-container {
+         order: -1;
+         }
+         }
+         .carousel-container {
+            overflow: hidden;
+        }
+        .carousel-wrapper {
+            display: flex;
+            transition: transform 0.3s ease-in-out;
+        }
+        .carousel-item {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+      </style>
+      
+      <!-- Meta Pixel Code -->
+         <script>
+            ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+               n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+            }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '1878368249226254');
+            fbq('track', 'PageView');
+         </script>
+      <noscript>
+         <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1878368249226254&ev=PageView&noscript=1" />
+      </noscript>
+      <script>
+         fbq('track', 'Contact');
+      </script>
+      <!-- End Meta Pixel Code -->
+   </head>
+   <body>
+      <nav class="absolute w-full absolute z-50">
+         <div class="md:absolute md:mx-auto w-full act">
+            <div class="flex justify-between items-center">
+               <a class="md:hidden lg:hidden text-2xl font-bold text-white px-4 py-2 rounded-md" href="#">
+               <img src="assets/imgs/logo.png" alt="Logo" class="h-8 md:h-12 lg:h-16" />
+               </a>
+               <!-- Burger Menu Button (Shown for Small Screens) -->
+               <div class="lg:hidden flex items-center px-3 py-2 md:hidden w-full justify-center">
+                  <a class="font-bold text-white text-md" href="tel:+420735098012">
+                  <i class="fa-solid fa-phone-volume mr-2 text-black"></i>+420 735 098 012 </a>
+               </div>
+               <!-- Navigation Links (Hidden for Small Screens) -->
+               <div class="hidden md:flex relative py-2 nav-links px-20" id="navLinks">
+                  <a href="#" class="text-white hover:text-gray-900 font-bold px-3 py-2 pink-border-nav transition duration-300 ease-in-out uppercase button"> ÚVOD </a>
+                  <a href="#sluzby" class="text-white hover:text-gray-900 font-bold px-3 py-2 pink-border-nav transition duration-300 ease-in-out uppercase button"> SLUŽBY </a>
+                  <a href="#omne" class="text-white hover:text-gray-900 font-bold px-3 py-2 pink-border-nav transition duration-300 ease-in-out uppercase button"> UKÁZKA </a>
+                  <a href="#reference" class="text-white hover:text-gray-900 font-bold px-3 py-2 pink-border-nav transition duration-300 ease-in-out uppercase button"> REFERENCE </a>
+                  <a href="#kontakt" class="text-white hover:text-gray-900 font-bold px-3 py-2 pink-border-nav transition duration-300 ease-in-out uppercase button"> KONTAKT </a>
+               </div>
+               <a class="hidden lg:flex text-2xl font-bold text-white px-4 py-2 rounded-md justify-end" href="#">
+                <img src="assets/imgs/logo.png" alt="Logo" class="h-8 md:h-12 lg:h-16" />
+               </a>
+               <div class="md:hidden flex items-center px-3 py-2">
+                  <button id="burgerBtn" class="text-black focus:outline-none">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                     </svg>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <section>
+         <div class="flex flex-col lg:flex-row">
+            <!-- Left Column (Text) -->
+            <!-- Right Column (Image) -->
+            <div class="lg:w-1/2">
+               <img src="assets/imgs/hero.png" alt="Hero Image" class="w-full h-auto">
+            </div>
+            <div class="lg:hidden w-full bottom-strip bg-blue-500"></div>   
+            <div class="lg:w-1/2 p-4 flex flex-col justify-center items-center">
+               <!-- Add the text here -->
+               <p class="text-5xl text-black font-bold text-center">GARANTUJEME</p>
+               <p class="text-7xl text-black font-bold text-center">O <strong class="text-8xl text-black font-normal">300%</strong></p>
+               <p class="text-5xl text-black font-bold text-center">VÍCE OBJEDNÁVEK</p>
+            </div>
+         </div>
+         <div class="hidden absolute lg:block w-full big-rotate left-0 lg:block bg-blue-500"></div>
+      </section>
+      <section id="sluzby" class="mt-6 p-4 container mx-auto">
+         <h2 class="text-3xl border-l-4 border-blue-500 text-black font-semibold uppercase px-2">Naše služby</h2>
+         <p class="text-xl border-l-4 border-blue-500 text-black font-normal px-2">Zajistíme Vám více objednávek a zvýšíme Vám obrat</p>
+         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4">
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2 shadow-lg">
+               <div class="relative px-4 py-6">
+                  <h3 class="text-xl text-gray-700 font-bold">SEO OPTIMALIZACE</h3>
+                  <p class="text-sm text-gray-500 font-normal mt-2">Zajistíme Vám více objednávek a zvýšíme Vám obrat</p>
+               </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2 shadow-lg">
+               <div class="relative px-4 py-6">
+                  <h3 class="text-xl text-gray-700 font-bold">SEO OPTIMALIZACE</h3>
+                  <p class="text-sm text-gray-500 font-normal mt-2">Zajistíme Vám více objednávek a zvýšíme Vám obrat</p>
+               </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2 shadow-lg">
+               <div class="relative px-4 py-6">
+                  <h3 class="text-xl text-gray-700 font-bold">SEO OPTIMALIZACE</h3>
+                  <p class="text-sm text-gray-500 font-normal mt-2">Zajistíme Vám více objednávek a zvýšíme Vám obrat</p>
+               </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2 shadow-lg">
+               <div class="relative px-4 py-6">
+                  <h3 class="text-xl text-gray-700 font-bold">SEO OPTIMALIZACE</h3>
+                  <p class="text-sm text-gray-500 font-normal mt-2">Zajistíme Vám více objednávek a zvýšíme Vám obrat</p>
+               </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-2 shadow-lg">
+               <div class="relative px-4 py-6">
+                  <h3 class="text-xl text-gray-700 font-bold">SEO OPTIMALIZACE</h3>
+                  <p class="text-sm text-gray-500 font-normal mt-2">Zajistíme Vám více objednávek a zvýšíme Vám obrat</p>
+               </div>
+            </div>
+            <div class="flex flex-col justify-center items-center">
+               <h2 class="text-sm text-black font-semibold uppercase px-2 text-center">Pro více informací nás kontaktujte na</h2>
+               <a href="tel:+420735098012" class="text-2xl text-black font-bold text-center">+420 735 098 012</a>
+            </div>
+         </div>
+      </section>
+
+      <section id="sluzby" class="mt-6 p-4 bg-gray-100">
+         <div class="container mx-auto">
+            <h2 class="text-3xl border-l-4 border-blue-500 text-black font-semibold uppercase px-2">Ukázka</h2>
+            <p class="text-xl border-l-4 border-blue-500 text-black font-normal px-2">
+               Chcete vidět jak vypadá naše práce? Podívejte se na některé z našich projektů.
+            </p>
+            <!--  -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+               <div class="bg-white shadow-lg rounded-md w-full">
+                  <img src="https://shop.vrama.eu/wp-content/uploads/2023/08/ukazka.png" alt="Hero Image" class="w-full h-auto rounded-md">
+                  <div class="p-4">
+                     <p class="text-xl text-black font-bold uppercase border-l-4 px-2 border-blue-600">Vratech.eu <strong class="text-gray-500 font-normal text-xs">2023-20??</strong></p>
+                     <p class="text-sm text-gray-500 font-normal mt-2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris elementum mauris vitae tortor. Fusce nibh. Integer in sapien. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.</p>
+                     <div class="flex justify-center items-center">
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md mt-4 hover:bg-blue-600">Přejít na stránku</button>
+                     </div>
+                  </div>  
+               </div>
+               <div class="bg-white shadow-lg rounded-md w-full">
+                  <img src="https://shop.vrama.eu/wp-content/uploads/2023/08/ukazka.png" alt="Hero Image" class="w-full h-auto rounded-md">
+                  <div class="p-4">
+                     <p class="text-xl text-black font-bold uppercase border-l-4 px-2 border-blue-600">Vrama.eu <strong class="text-gray-500 font-normal text-xs">2023-20??</strong></p>
+                     <p class="text-sm text-gray-500 font-normal mt-2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris elementum mauris vitae tortor. Fusce nibh. Integer in sapien. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.</p>
+                     <div class="flex justify-center items-center">
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md mt-4 hover:bg-blue-600">Přejít na stránku</button>
+                     </div>
+                  </div>  
+               </div>
+               <div class="bg-white shadow-lg rounded-md w-full">
+                  <img src="https://shop.vrama.eu/wp-content/uploads/2023/08/ukazka.png" alt="Hero Image" class="w-full h-auto rounded-md">
+                  <div class="p-4">
+                     <p class="text-xl text-black font-bold uppercase border-l-4 px-2 border-blue-600">Vrama.sk <strong class="text-gray-500 font-normal text-xs">2023-20??</strong></p>
+                     <p class="text-sm text-gray-500 font-normal mt-2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris elementum mauris vitae tortor. Fusce nibh. Integer in sapien. Maecenas fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.</p>
+                     <div class="flex justify-center items-center">
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md mt-4 hover:bg-blue-600">Přejít na stránku</button>
+                     </div>
+                  </div>  
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section id="sluzby" class="mt-6 p-4">
+         <div class="container mx-auto">
+            <h2 class="text-3xl border-l-4 border-blue-500 text-black font-semibold uppercase px-2">Reference</h2>
+            <p class="text-xl border-l-4 border-blue-500 text-black font-normal px-2">
+               Co říkají naši klienti o naší práci?
+            </p>
+            <!--  -->
+            <div class="carousel-container mt-5 w-full bg-blue-500 text-white relative overflow-hidden shadow-lg rounded-lg">
+               <div class="carousel-wrapper flex p-8">
+                   <div class="carousel-item w-full flex">
+                     <!-- USER INFO -->
+                     <div class="flex flex-row w-full">
+                        <div class="flex flex-col justify-center items-start ml-4">
+                           <p class="text-xl text-white font-bold uppercase border-l-4 border-blue-900 px-4 py-4">Dominik Hůla <strong class="text-gray-200 font-normal text-xs">2023-20??</strong></p>
+                           <p class="text-sm text-white font-normal border-l-4 border-blue-900 px-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam ante. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Aliquam in lorem sit amet leo accumsan lacinia. Fusce nibh. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Etiam egestas wisi a erat. Etiam bibendum elit eget erat. Vivamus porttitor turpis ac leo. Sed ac dolor sit amet purus malesuada congue. Etiam posuere lacus quis dolor. Praesent in mauris eu tortor porttitor accumsan. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero.</p>
+                        </div>
+                     </div>
+                   </div>
+                   <div class="carousel-item w-full flex">
+                     <!-- USER INFO -->
+                     <div class="flex flex-row w-full">
+                        <div class="flex flex-col justify-center items-start ml-4">
+                           <p class="text-xl text-white font-bold uppercase border-l-4 border-blue-900 px-4 py-4">Dominik Hůla <strong class="text-gray-200 font-normal text-xs">2023-20??</strong></p>
+                           <p class="text-sm text-white font-normal border-l-4 border-blue-900 px-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam ante. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Aliquam in lorem sit amet leo accumsan lacinia. Fusce nibh. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Etiam egestas wisi a erat. Etiam bibendum elit eget erat. Vivamus porttitor turpis ac leo. Sed ac dolor sit amet purus malesuada congue. Etiam posuere lacus quis dolor. Praesent in mauris eu tortor porttitor accumsan. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero.</p>
+                        </div>
+                     </div>
+                   </div>
+                   <div class="carousel-item w-full flex">
+                     <!-- USER INFO -->
+                     <div class="flex flex-row w-full">
+                        <div class="flex flex-col justify-center items-start ml-4">
+                           <p class="text-xl text-white font-bold uppercase border-l-4 border-blue-900 px-4 py-4">Dominik Hůla <strong class="text-gray-200 font-normal text-xs">2023-20??</strong></p>
+                           <p class="text-sm text-white font-normal border-l-4 border-blue-900 px-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam ante. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Aliquam in lorem sit amet leo accumsan lacinia. Fusce nibh. Cras pede libero, dapibus nec, pretium sit amet, tempor quis. Etiam egestas wisi a erat. Etiam bibendum elit eget erat. Vivamus porttitor turpis ac leo. Sed ac dolor sit amet purus malesuada congue. Etiam posuere lacus quis dolor. Praesent in mauris eu tortor porttitor accumsan. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Nullam lectus justo, vulputate eget mollis sed, tempor sed magna. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero.</p>
+                        </div>
+                     </div>
+                   </div>
+               </div>
+               <button id="prevBtn" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-800 px-3 py-1 rounded-full text-white ml-2">
+                  <i class="fa-solid fa-arrow-left"></i>
+               </button>
+               <button id="nextBtn" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-800 px-3 py-1 rounded-full text-white mr-2">
+                  <i class="fa-solid fa-arrow-right"></i>
+               </button>
+           </div>
+           
+         </div>
+      </section>
+
+      <section id="sluzby" class="mt-6 p-4 bg-gray-100">
+         <div class="container mx-auto">
+            <h2 class="text-3xl border-l-4 border-blue-500 text-black font-semibold uppercase px-2">Kontakt</h2>
+            <p class="text-xl border-l-4 border-blue-500 text-black font-normal px-2 mb-4">
+               Je něco, co byste nás chtěli zeptat? Neváhejte nás kontaktovat.
+            </p>
+            <!--  -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+               <div class="flex flex-col justify-center items-center w-full">
+                  <form action="#" method="POST" class="w-full max-w-lg">
+                     <div class="mb-4">
+                         <label for="name" class="block text-gray-600">Name</label>
+                         <input type="text" id="name" name="name" class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400 w-full" required>
+                     </div>
+                     <div class="mb-4">
+                         <label for="phone" class="block text-gray-600">Phone Number</label>
+                         <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400" required>
+                     </div>
+                     <div class="mb-4">
+                         <label for="message" class="block text-gray-600">Message</label>
+                         <textarea id="message" name="message" class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:border-blue-400" rows="4" required></textarea>
+                     </div>
+                     <div class="mt-6">
+                         <button type="submit" class="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-200">Submit</button>
+                     </div>
+                 </form>
+               </div>
+               <div class="flex flex-col justify-center items-center">
+                  <h2 class="text-sm text-black font-semibold uppercase px-2 text-center">Pro více informací nás kontaktujte na</h2>
+                  <a href="tel:+420735098012" class="text-2xl text-black font-bold text-center">+420 735 098 012</a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <footer class="dark:bg-gray-900 m-4">
+         <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+             <div class="sm:flex sm:items-center sm:justify-between">
+                 <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0">
+                     <img src="assets/imgs/logo.png" class="w-52 mr-3" alt="Flowbite Logo" />
+                 </a>
+                 <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                     <li>
+                         <a href="#" class="mr-4 hover:underline md:mr-6 ">Služby</a>
+                     </li>
+                     <li>
+                         <a href="#" class="mr-4 hover:underline md:mr-6">Ukázka</a>
+                     </li>
+                     <li>
+                         <a href="#" class="mr-4 hover:underline md:mr-6 ">Reference</a>
+                     </li>
+                     <li>
+                         <a href="#" class="hover:underline">Kontakt</a>
+                     </li>
+                 </ul>
+             </div>
+             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+             <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://supersite.cz/" class="hover:underline">Supersite</a>. Všechna práva vyhrazena.</span>
+         </div>
+     </footer>
+      <script>
+         const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const wrapper = document.querySelector('.carousel-wrapper');
+        const items = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        // Function to update the carousel display
+        function updateCarousel() {
+            const itemWidth = items[currentIndex].offsetWidth;
+            const newPosition = -currentIndex * itemWidth;
+            wrapper.style.transform = `translateX(${newPosition}px)`;
+        }
+
+        // Event listener for the "Previous" button
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            updateCarousel();
+        });
+
+        // Event listener for the "Next" button
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % items.length;
+            updateCarousel();
+        });
+
+        // Initialize the carousel
+        updateCarousel();  
+      </script>
+   </body>
+</html>
